@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="post" action="{% url 'logout' %}" class="card p-4">
+                    {% csrf_token %}
+                    <h2 class="mb-4">You have been logged out</h2>
+                    <div class="border-top pt-3">
+                        <button type="submit" class="btn btn-primary">Log In Again</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
